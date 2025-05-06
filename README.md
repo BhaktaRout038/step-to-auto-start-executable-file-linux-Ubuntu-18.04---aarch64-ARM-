@@ -115,9 +115,20 @@ You should see:
 Active: inactive (dead)
 ```
 
-Let me know if you want to completely remove the service as well.
 
+## 🔍 Explanation of each part:
 
+```
+Directive	Purpose
+Description	A short description of your service
+After=network.target	Waits for the network to come up before starting
+Type=simple	Assumes your app stays in the foreground and doesn't fork
+ExecStart	The full path to the executable
+WorkingDirectory	Directory where the binary will run (helps with relative paths/logs)
+Restart=always	Automatically restarts if it crashes or is killed
+RestartSec=5	Waits 5 seconds before restarting
+WantedBy=multi-user.target	Ensures it starts during the system's multi-user (normal) boot target
+```
 
 
 ## 📈 View Application Logs
