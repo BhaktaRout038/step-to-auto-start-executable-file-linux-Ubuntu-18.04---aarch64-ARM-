@@ -87,7 +87,7 @@ If everything is correct, you should see:
 
 ---
 
-To **stop** your running service `trafiksolvasd.service`, just run:
+### 📌To **stop** your running service `trafiksolvasd.service`, just run:
 
 ```bash
 sudo systemctl stop trafiksolvasd.service
