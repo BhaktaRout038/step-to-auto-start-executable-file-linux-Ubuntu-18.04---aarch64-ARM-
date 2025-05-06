@@ -87,6 +87,39 @@ If everything is correct, you should see:
 
 ---
 
+To **stop** your running service `trafiksolvasd.service`, just run:
+
+```bash
+sudo systemctl stop trafiksolvasd.service
+```
+
+---
+
+### 📌 If you also want to **disable it from auto-starting on boot**:
+
+```bash
+sudo systemctl disable trafiksolvasd.service
+```
+
+---
+
+### ✅ To confirm it's stopped:
+
+```bash
+systemctl status trafiksolvasd.service
+```
+
+You should see:
+
+```
+Active: inactive (dead)
+```
+
+Let me know if you want to completely remove the service as well.
+
+
+
+
 ## 📈 View Application Logs
 
 ### Real-time logs
